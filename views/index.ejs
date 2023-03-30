@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <title><%= title %></title>
+</head>
+<body>
+    <h1>TODO App</h1>
+    <div id="main">
+    <ol> 
+<!-- traversing the list using ejs -->
+        
+        <div>
+        <% for(let i of todo_list) { %>
+        <li>
+            <p id="desc"><%= i.todo %></p>
+            <p id="dd"><%= i.date %></p>
+            <p id="categories"><%= i.category %></p>
+            <div class="delete-button">
+                <a id="delete_btn" href="/delete/?id=<%= i._id %>">
+                    delete
+                </a>
+            </div>
+        </li>
+        <% } %>
+        </div>
+    </ol>
+    </div>
+
+
+    <!--post request for the form -->
+    <div>
+        <form action="/createform" method="POST">
+            <input id="form_desc" type="text" name="todo" placeholder="add description"  required>
+            <label for="session-date">Start date:</label>
+            <input type="date" id="session-date" name="date" required>
+           <label for="cars">Select Category:</label>
+                <select name="category" id="cars">
+                    <option value="entertainment">entertainment</option>
+                    <option value="study">study</option>
+                    <option value="work">work</option>
+                    <option value="grocery">grocery</option>
+                  </select>
+        
+            <button type="submit" id="submit_btn">add todo</button>
+            
+        </form>
+    </div>
+    
+    <script src="/js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+body{
+    text-align: center;
+    background: pink;
+    font-family: sans-serif;
+}
+
+#main{
+ 
+    border: 1px solid black;
+
+    text-align: center;
+    width: fit-content;
+    border-radius: 20px;
+   margin-left: 50px;
+   margin-bottom: 10px;
+    
+}
+
+#submit_btn{
+    background-color: blue;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+#delete_btn{
+    color: white;
+    border: 1px solid black;
+    background-color: green;
+    font-weight: 100;
+    font-size: larger;
+    border-radius: 20px;
+}
+
+#cars{
+    margin: 10px 10px 10px 10px ;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+#form_desc{
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    border: 1px solid black;
+ 
+}
+
+input#session-date{
+    position:relative;
+    overflow:hidden;
+  }
+  input#session-date::-webkit-calendar-picker-indicator{
+    display:block;
+    top:0;
+    left:0;
+    background: #0000;
+    position:absolute;
+    transform: scale(12)
+  }
